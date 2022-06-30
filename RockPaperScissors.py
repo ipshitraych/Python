@@ -8,7 +8,7 @@ game = True
 pchoice = {"ROCK": 1,"PAPER": 2,"SCISSORS": 3}
 bchoice = {1: "ROCK", 2: "PAPER", 3: "SCISSORS"}
 
-print("Rock, paper, scissors but worse")
+print("Rock, paper, scissors")
 rounds = int(input("Choose the number of rounds: "))
 
 while game:
