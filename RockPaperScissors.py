@@ -2,7 +2,7 @@ import random
 
 res = 0
 pscore = 0
-bscore = 0
+cscore = 0
 play = 0
 game = True
 prompt = True
@@ -30,13 +30,13 @@ while prompt:
             pscore += 1
         elif con == 1 or con == -2:
             print("Round lost")
-            bscore +=1
+            cscore +=1
         else:
             print("Round drawn")
 
         play += 1
         
-        if rounds/2 < bscore :
+        if rounds/2 < cscore :
             game = False
             res = -1
         elif rounds/2 < pscore:
@@ -45,11 +45,11 @@ while prompt:
 
         if rounds == play:
             game = False
-            if pscore > bscore:
+            if pscore > cscore:
                 res = 1
-            elif bscore > pscore:
+            elif cscore > pscore:
                 res = -1    
-            elif pscore - bscore == 0:
+            elif pscore - cscore == 0:
                 res = 0
                 
     if res == 1:
