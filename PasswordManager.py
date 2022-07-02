@@ -26,13 +26,19 @@ while session:
     prompt = input("\nGenerate a password. (1)\nStore a password (2)\nSearch (3)\nClose (4)\n")
 
     if prompt == "1":
-
         res = make()
-        user = input("\nStore? (Y/N): ")
+        while True:
+            try:
+                user = input("\nStore? (Y/N): ")
+                if user == "Y" or user == "N":
+                    break
+            except:
+                pass
+            print("\nInvalid input")     
 
         if user == "Y":
 
-            website = input("Enter the name of the website: ")
+            website = input("\nEnter the name of the website: ")
             email = input("Enter your email address: ")
             com = "Website: " + website + " | Email: " + email + " | Password: " + res
             passfile = open("passwords.txt", "a")
