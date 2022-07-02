@@ -3,6 +3,7 @@ import random
 let = "abcdefghijklmnopqrstuv"
 num = "1234567890"
 spe = "!@#$%^&*()_+-"
+ser = ""
 session = True
 
 def make():
@@ -59,16 +60,23 @@ while session:
 
     elif prompt == "3":
 
-        crit = input("\nEnter search criteria: ")
-        passfile = open("passwords.txt", "r")
-        for y in passfile.readlines():
-            if crit in y:
-                print(y)
-        passfile.close()
+        try:
+            crit = input("\nEnter search criteria: ")
+            passfile = open("passwords.txt", "r")
+            for y in passfile.readlines():
+                if crit in y:
+                    print(y)
+                    ser = ser + y
+            passfile.close()
+            if ser == "":
+                print("No matches")
+        except FileNotFoundError:
+            print("File does not exist")
+            pass   
 
     elif prompt == "4":
         
         session = False
 
     else:
-        print("\nInvalid option\n")
+        print("\nInvalid option")
