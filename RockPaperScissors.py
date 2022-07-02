@@ -8,7 +8,7 @@ game = True
 prompt = True
 
 pchoice = {"ROCK": 1,"PAPER": 2,"SCISSORS": 3}
-bchoice = {1: "ROCK", 2: "PAPER", 3: "SCISSORS"}
+cchoice = {1: "ROCK", 2: "PAPER", 3: "SCISSORS"}
 
 print("Rock, paper, scissors")
 
@@ -22,7 +22,7 @@ while prompt:
         pla = pchoice[pinput.upper()]
 
         bot = random.choice(range(1, 3))
-        print("I choose" ,bchoice[bot])
+        print("I choose" ,cchoice[bot])
 
         con = bot - pla
         if con == -1 or con == 2:
