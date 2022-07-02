@@ -29,15 +29,14 @@ while session:
     if prompt == "1":
         res = make()
         while True:
-            try:
-                user = input("\nStore? (Y/N): ")
-                if user == "Y" or user == "N":
-                    break
-            except:
+            user = input("\nStore? (Y/N): ")
+            if user.upper() == "Y" or user.upper() == "N":
+                break   
+            else:
                 pass
-            print("\nInvalid input")     
+            print("Invalid input")     
 
-        if user == "Y":
+        if user.upper() == "Y":
 
             website = input("\nEnter the name of the website: ")
             email = input("Enter your email address: ")
@@ -79,4 +78,4 @@ while session:
         session = False
 
     else:
-        print("\nInvalid option")
+        print("Invalid option")
