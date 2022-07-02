@@ -14,11 +14,29 @@ print("Rock, paper, scissors")
 
 while prompt:
 
-    rounds = int(input("Choose the number of rounds: "))
+    while True:
+        try:
+            rounds = int(input("Choose the number of rounds: "))
+            if "-" in str(rounds) or "." in str(rounds):
+                pass
+            else:
+                break    
+        except ValueError:
+            pass
+        print("Invalid input\n")
 
     while game:
-
+        
         pinput = input("\nThrow: ")
+
+        while True:
+            if pinput.upper() in "ROCKPAPERSCISSORS":
+                break
+            else:
+                print("Invalid input")
+                pinput = input("\nThrow: ")
+                pass
+
         pla = pchoice[pinput.upper()]
 
         bot = random.choice(range(1, 3))
@@ -60,8 +78,16 @@ while prompt:
         print("\nCOMP wins the game")
 
     choice = input("\nAnother game? (Y/N) ")
-    if choice == "N":
-        prompt = False
-    else:
-        game = True
-        play = 0 
+    
+    while True:
+        if choice == "N":
+            prompt = False
+            break
+        elif choice == "Y":
+            game = True
+            play = 0 
+            break
+        else:
+            print("Invalid input")
+            pass
+        choice = input("\nAnother game? (Y/N) ")
