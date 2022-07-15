@@ -85,7 +85,6 @@ def reset():
         opla = "Computer"
         pick = Label(win, text = "You play with the X's").grid(row = 1)
 
-
 def wincheck():
     
     global game
