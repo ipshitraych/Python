@@ -215,7 +215,7 @@ win.title("Tic Tac Toe")
 
 win.geometry("500x600")
 
-canvas=Canvas(win, height=500, width=500)
+canvas = Canvas(win, height=500, width=500)
 canvas.grid()
 
 #the images are 512x512
@@ -227,14 +227,14 @@ butnwin = canvas.create_window(25, 10, anchor = NW, window = butn)
 butr = Button(canvas, padx = 10, pady = 5, text = "Reset board", state = DISABLED, command = lambda: reset())
 butrwin = canvas.create_window(125, 10, anchor = NW, window = butr)
 
-but1 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(0))
-but2 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(1))
-but3 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(2))
-but4 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(3))
-but5 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(4))
-but6 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(5))
-but7 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(6))
-but8 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(7))
-but9 = Button(win, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(8))
+but1 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(0))
+but2 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(1))
+but3 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(2))
+but4 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(3))
+but5 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(4))
+but6 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(5))
+but7 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(6))
+but8 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(7))
+but9 = Button(canvas, padx = 30, pady = 27, highlightthickness = 1, bd = 1, command = lambda: click(8))
 
 win.mainloop()
